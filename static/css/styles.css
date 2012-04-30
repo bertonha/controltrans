@@ -1,0 +1,19 @@
+#logo {
+    font-size: 100px;
+    font-height: 100px;
+    text-shadow: 2px 2px 2px #FFF;
+}
+
+#content {
+    margin: 0 20px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+body {
+    background-color: #EEE;
+}
+
+h1 {
+    text-align: center;
+}

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from core.models import Caminhao, Cliente, Fornecedor, Nota, Transportadora
+from controltrans.core.models import Caminhao, Cliente, Fornecedor, Nota, Transportadora
 
 admin.site.register(Caminhao)
 admin.site.register(Cliente)

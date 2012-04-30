@@ -3,9 +3,8 @@
 *.pyc
 local_settings.py
 
-controltrans/banco.db
+database.db
 
 .pydevproject
 .project
 .settings/
-static/
