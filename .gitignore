@@ -8,3 +8,4 @@ controltrans/banco.db
 .pydevproject
 .project
 .settings/
+static/
