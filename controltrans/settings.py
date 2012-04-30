@@ -1,6 +1,6 @@
 # Django settings for controltrans project.
 
-from os.path import abspath, dirname, join
+from os.path import abspath, basename, dirname, join
 PROJECT_DIR = abspath(join(dirname(__file__), '..'))
 
 DEBUG = True
