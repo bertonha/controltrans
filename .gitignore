@@ -1,10 +1,13 @@
 *.log
 *.pot
 *.pyc
+*.orig
+*.rej
 local_settings.py
-
 database.db
-
 .pydevproject
 .project
+
 .settings/
+static/admin/*
+
