@@ -14,12 +14,12 @@ class UtilsTest(TestCase):
     def test_parse_fornecedor(self):
         soup = read_xml('39869.xml')
         fornecedor = parse_fornecedor(soup)
-        self.assertEqual(fornecedor.cnpj, soup.emit.cnpj.text)
+        self.assertEqual(fornecedor.cnpj, soup.emit.CNPJ.text)
 
     def test_parse_client(self):
         soup = read_xml('39869.xml')
         client = parse_client(soup)
-        self.assertEqual(client.cnpj, soup.dest.cnpj.text)
+        self.assertEqual(client.cnpj, soup.dest.CNPJ.text)
 
     def test_verify_carrier_true(self):
         soup = read_xml('39869.xml')
