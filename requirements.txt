@@ -1,3 +1,5 @@
 django
 psycopg2
 pil
+beautifulsoup4
+

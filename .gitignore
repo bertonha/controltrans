@@ -9,5 +9,5 @@ database.db
 .project
 
 .settings/
-static/admin/*
+env/
 
