@@ -1,5 +1,6 @@
 django
 psycopg2
 pil
+lxml
 beautifulsoup4
 
