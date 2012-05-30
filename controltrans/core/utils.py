@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 from controltrans.core.models import Cliente, Endereco, Fornecedor, \
                                      Transportadora
@@ -11,9 +12,12 @@ def field_text(field):
 
 
 def read_xml(filename):
-    with open(filename, 'rt') as data:
-        soup = BeautifulSoup(data, features='xml')
-    return soup
+    if isinstance(filename, InMemoryUploadedFile):
+        data = filename.read()
+    else:
+        with open(filename, 'rt') as f:
+            data = f.read()
+    return BeautifulSoup(data, features='xml')
 
 
 def parse_endereco(soup):
@@ -24,7 +28,6 @@ def parse_endereco(soup):
     endereco.cidade = soup.xMun.text
     endereco.uf = soup.UF.text
     endereco.cep = soup.CEP.text
-    endereco.save()
     return endereco
 
 
@@ -41,7 +44,6 @@ def parse_fornecedor(soup):
         fornecedor.fone = field_text(xml.fone)
         fornecedor.email = field_text(xml.email)
         fornecedor.endereco = parse_endereco(xml.enderEmit)
-        fornecedor.save()
     return fornecedor
 
 
@@ -58,7 +60,6 @@ def parse_client(soup):
         client.fone = field_text(xml.fone)
         client.email = field_text(xml.email)
         client.endereco = parse_endereco(xml.enderDest)
-        client.save()
     return client
 
 

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Confirme os dados!</h1>
+    
+    <h2>Fornecedor</h2>
+    {{ fornecedor.as_p }}
+    
+    <h2>Cliente</h2>
+    {{ cliente.as_p }}
+{% endblock content %}

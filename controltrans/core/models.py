@@ -38,7 +38,7 @@ class CommonFields(models.Model):
 class Transportadora(CommonFields):
     logo = models.ImageField(upload_to='transportadora', blank=True)
 
- 
+
 class Caminhao(models.Model):
     TRUCK_TYPE = (
         (1, 'Truck'),

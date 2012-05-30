@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'controltrans.core.views.home', name='home'),
+    url(r'^upload/$', 'controltrans.core.views.load_xml', name='upload'),
     # Examples:
     # url(r'^$', 'controltrans.views.home', name='home'),
     # url(r'^controltrans/', include('controltrans.foo.urls')),
